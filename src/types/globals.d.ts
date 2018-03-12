@@ -22,5 +22,6 @@ declare global {
 
   interface Date {
     fp_incr: (n: number) => Date;
+    fp_decr: (n: number) => Date;
   }
 }
