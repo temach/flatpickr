@@ -67,9 +67,6 @@
       z-index 999
       display block
   &.multiMonth
-    .prevMonthDay, .nextMonthDay
-      visibility hidden
-
     .flatpickr-days .dayContainer:nth-child(n+1)
       & .flatpickr-day.inRange:nth-child(7n+7)
         box-shadow: none !important;
@@ -447,7 +444,7 @@ span.flatpickr-weekday
   justify-content center
   text-align center
 
-  &, &.prevMonthDay, &.nextMonthDay
+  &
     &.inRange, &.today.inRange, &:hover, &:focus
       cursor pointer
       outline 0
@@ -467,7 +464,7 @@ span.flatpickr-weekday
         color white
 
   &.selected, &.startRange, &.endRange
-    &, &.inRange, &:focus, &:hover, &.prevMonthDay, &.nextMonthDay
+    &, &.inRange, &:focus, &:hover
       background $selectedDayBackground
       box-shadow none
 
@@ -497,8 +494,7 @@ span.flatpickr-weekday
     box-shadow: (-2.5*$dayMargin) 0 0 $dayHoverBackground, (2.5*$dayMargin) 0 0 $dayHoverBackground
 
   &.disabled, &.disabled:hover,
-  &.prevMonthDay, &.nextMonthDay,
-  &.notAllowed, &.notAllowed.prevMonthDay, &.notAllowed.nextMonthDay
+  &.notAllowed
     color alpha($dayForeground, 0.3)
     background transparent
 
